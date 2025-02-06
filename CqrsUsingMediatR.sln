@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CqrsUsingMediatRApi", "CqrsUsingMediatRApi.csproj", "{C8D1EFBD-A3DF-4EEB-95B4-CA4F05867305}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CqrsUsingMediatRApi", "CqrsUsingMediatRApi\CqrsUsingMediatRApi.csproj", "{C8D1EFBD-A3DF-4EEB-95B4-CA4F05867305}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CqrsClient", "CqrsClient\CqrsClient.csproj", "{C99EC5C8-5B3D-4245-AE68-AE712B4AC6C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{C8D1EFBD-A3DF-4EEB-95B4-CA4F05867305}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8D1EFBD-A3DF-4EEB-95B4-CA4F05867305}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8D1EFBD-A3DF-4EEB-95B4-CA4F05867305}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C99EC5C8-5B3D-4245-AE68-AE712B4AC6C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C99EC5C8-5B3D-4245-AE68-AE712B4AC6C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C99EC5C8-5B3D-4245-AE68-AE712B4AC6C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C99EC5C8-5B3D-4245-AE68-AE712B4AC6C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
