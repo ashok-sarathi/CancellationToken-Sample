@@ -5,18 +5,27 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
-
-            var client = new HttpClient()
+            Task.Delay(5000).GetAwaiter().GetResult();
+            Task.Run(async () =>
             {
-                BaseAddress = new Uri("https://localhost:7126")
-            };
+                try
+                {
+                    var client = new HttpClient()
+                    {
+                        BaseAddress = new Uri("https://localhost:7126")
+                    };
 
-            var data1 = client.GetAsync("api/Product").Result;
-            //Task.Delay(10000).Wait();
-            //CancellationTokenSource cts = new CancellationTokenSource();
-            //cts.CancelAfter(3000);
-            //var data2 = await client.GetAsync("api/Product", cts.Token);
-            //Console.ReadLine();
+                    var cts = new CancellationTokenSource(5000);
+                    var data2 = client.GetAsync("api/Product", cts.Token);
+
+                    await data2;
+                    var i = 0;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+            }).GetAwaiter().GetResult();
         }
     }
 }

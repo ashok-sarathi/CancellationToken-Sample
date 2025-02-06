@@ -17,12 +17,6 @@ namespace CqrsUsingMediatRApi.Controllers
         [HttpGet]
         public async Task<IEnumerable<ProductModel>> Get(CancellationToken cancellationToken)
         {
-            //while(cancellationToken.IsCancellationRequested)
-            //{
-            //    Results.StatusCode(499);
-            //    return [];
-            //}
-            //await Task.Delay(10000);
             return await sender.Send(new ListProductsQueryRequest(), cancellationToken);
         }
 
